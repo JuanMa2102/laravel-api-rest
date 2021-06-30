@@ -1,0 +1,119 @@
+GET http://localhost:8000/api/v1/category
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 6|uOxDJS0P1AEbQ18UYcK2VVmJ9OF3cvdOgsuaB07l
+
+### next page
+GET http://localhost:8000/api/v1/category?page=2
+Accept: application/json
+Authorization: Bearer 5|Mks9teDbxggYD3Xepn4TQ1CwWHIOoptXiZWn9RwY
+
+### store new category
+POST http://localhost:8000/api/v1/category
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 5|Mks9teDbxggYD3Xepn4TQ1CwWHIOoptXiZWn9RwY
+
+{
+    "name": "New Category"
+}
+
+### update category
+PUT http://localhost:8000/api/v1/category/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 7|YPQhTDztql4febtzxGUYDQvcFjQGE3cssB4DtNvd
+
+{
+    "name": "Bebidas"
+}
+
+### show category
+GET http://localhost:8000/api/v1/category/9
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 5|Mks9teDbxggYD3Xepn4TQ1CwWHIOoptXiZWn9RwY
+
+### DELETE category
+DELETE  http://localhost:8000/api/v1/category/10
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 5|Mks9teDbxggYD3Xepn4TQ1CwWHIOoptXiZWn9RwY
+
+### Auth register user
+POST http://localhost:8000/api/register
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Administrador",
+    "email": "administrador@gmail.com",
+    "password": "admin"
+}
+
+### Auth login user
+POST http://localhost:8000/api/login
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "administrador@gmail.com",
+    "password": "admin"
+}
+
+### AUTH logout user
+POST http://localhost:8000/api/logout
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 5|Mks9teDbxggYD3Xepn4TQ1CwWHIOoptXiZWn9RwY
+
+// SECCION DE PRODUCTOS
+
+###
+GET http://localhost:8000/api/v1/product
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 7|YPQhTDztql4febtzxGUYDQvcFjQGE3cssB4DtNvd
+
+### next page
+GET http://localhost:8000/api/v1/product?page=2
+Accept: application/json
+Authorization: Bearer 6|uOxDJS0P1AEbQ18UYcK2VVmJ9OF3cvdOgsuaB07l
+
+### store new product
+POST http://localhost:8000/api/v1/product
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 6|uOxDJS0P1AEbQ18UYcK2VVmJ9OF3cvdOgsuaB07l
+
+{
+    "name": "Peñafiel",
+    "description": "Pepsi 2Lt",
+    "price": "20.00",
+    "category_id": 1
+}
+
+### update product
+PUT http://localhost:8000/api/v1/product/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 6|uOxDJS0P1AEbQ18UYcK2VVmJ9OF3cvdOgsuaB07l
+
+{
+    "name": "Cocacola",
+    "description": "Bebida Carbonatada",
+    "price": "12.50",
+    "category_id": 1
+}
+
+### show product
+GET http://localhost:8000/api/v1/product/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 7|YPQhTDztql4febtzxGUYDQvcFjQGE3cssB4DtNvd
+
+### DELETE product
+DELETE  http://localhost:8000/api/v1/product/5
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 7|YPQhTDztql4febtzxGUYDQvcFjQGE3cssB4DtNvd
